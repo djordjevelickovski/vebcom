@@ -1,70 +1,875 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Responsive Navbar with Search Box | CodingNepal</title>
-      <link rel="stylesheet" href="css/style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-   </head>
-   <body>
-      <nav>
-         <div class="menu-icon">
-            <span class="fas fa-bars"></span>
-         </div>
-         <div class="logo">
-            CodingWang
-         </div>
-         <div class="nav-items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Feedback</a></li>
-         </div>
-         <div class="search-icon">
-            <span class="fas fa-search"></span>
-         </div>
-         <div class="cancel-icon">
-            <span class="fas fa-times"></span>
-         </div>
-         <form action="#">
-            <input type="search" class="search-data" placeholder="Search" required>
-            <button type="submit" class="fas fa-search"></button>
-         </form>
-      </nav>
-      <div class="content">
-         <header class="space">Responsive Navbar with Search Box</header>
-         <div class="space text">
-            using HTML CSS & JavaScript
-         </div>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>vebcom - Konsultantske usluge</title>
+    <!-- Icon -->
+    <link rel="stylesheet" href="css/lineicons.css" />
+    <!-- Tailwind css -->
+    <link rel="stylesheet" href="css/tailwindcss.css" />
+  </head>
+  <body>
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap" class="relative">
+      <!-- Navbar Start -->
+      <div class="navigation fixed top-0 left-0 w-full z-30 duration-300">
+        <div class="container px-4">
+          <nav
+            class="
+              navbar
+              py-2
+              navbar-expand-lg
+              flex
+              justify-between
+              items-center
+              relative
+              duration-300
+            "
+          >
+            <a class="navbar-brand" href="index.html">
+              <img src="img/vebcom.svg" alt="Logo" width="140" />
+            </a>
+            <button class="navbar-toggler focus:outline-none block lg:hidden">
+              <span
+                class="
+                  toggler-icon
+                  block
+                  bg-gray-700
+                  relative
+                  duration-300
+                  h-[2px]
+                  w-[30px]
+                  my-[6px]
+                "
+              >
+              </span>
+              <span
+                class="
+                  toggler-icon
+                  block
+                  bg-gray-700
+                  relative
+                  duration-300
+                  h-[2px]
+                  w-[30px]
+                  my-[6px]
+                "
+              >
+              </span>
+              <span
+                class="
+                  toggler-icon
+                  block
+                  bg-gray-700
+                  relative
+                  duration-300
+                  h-[2px]
+                  w-[30px]
+                  my-[6px]
+                "
+              >
+              </span>
+            </button>
+
+            <div
+              class="
+                collapse
+                navbar-collapse
+                hidden
+                lg:block
+                duration-300
+                shadow
+                absolute
+                top-full
+                left-0
+                mt-full
+                bg-white
+                z-20
+                px-5
+                py-3
+                w-full
+                lg:static lg:bg-transparent lg:shadow-none
+              "
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav mr-auto justify-center items-center lg:flex" >
+                <li class="nav-item">
+                  <a class="page-scroll nav-link active" href="#hero-area">Početna</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll nav-link" href="#usluge">Servisne usluge</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll nav-link" href="#feature">Konsultanstke usluge</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll nav-link" href="#contact">Kontakt</a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="
+                header-btn
+                hidden
+                sm:block sm:absolute sm:right-0 sm:mr-16
+                lg:static lg:mr-0
+              "
+            >
+              <a
+                class="
+                  text-blue-600
+                  border border-blue-600
+                  px-10
+                  py-3
+                  rounded-full
+                  duration-300
+                  hover:bg-blue-600 hover:text-white
+                "
+                href="#feature"
+              >
+                FAQ</a
+              >
+            </div>
+          </nav>
+        </div>
       </div>
-      <script>
-         const menuBtn = document.querySelector(".menu-icon span");
-         const searchBtn = document.querySelector(".search-icon");
-         const cancelBtn = document.querySelector(".cancel-icon");
-         const items = document.querySelector(".nav-items");
-         const form = document.querySelector("form");
-         menuBtn.onclick = ()=>{
-           items.classList.add("active");
-           menuBtn.classList.add("hide");
-           searchBtn.classList.add("hide");
-           cancelBtn.classList.add("show");
-         }
-         cancelBtn.onclick = ()=>{
-           items.classList.remove("active");
-           menuBtn.classList.remove("hide");
-           searchBtn.classList.remove("hide");
-           cancelBtn.classList.remove("show");
-           form.classList.remove("active");
-           cancelBtn.style.color = "#ff3d00";
-         }
-         searchBtn.onclick = ()=>{
-           form.classList.add("active");
-           searchBtn.classList.add("hide");
-           cancelBtn.classList.add("show");
-         }
-      </script>
-   </body>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header Area wrapper End -->
+
+
+
+    <!-- Hero Area Start -->
+    <section id="hero-area" class="bg-blue-100 pt-48 pb-10">
+      <div class="container px-4 w-2/3">
+        <div class="flex justify-between">
+          <div class="w-full text-left">
+
+              <h2 class="text-4xl font-bold leading-snug text-gray-700 mb-10">
+              IT KONSULTANTSKE USLUGE
+              <!---
+              <br class="hidden lg:block" />
+              Shine Template
+              -->
+            </h2>
+            <div>
+              Naša stručnost i iskustvo vam mogu pomoći u održavanju, razvoju i unapređenju različitih IT servisa i rešenja, kao i u razvoju sveobuhvatne IT strategije za digitalnu i tehnološku transformaciju vaše organizacije u skladu sa vašim poslovnim ciljevima. 
+              Strateško informatičko savetovanje će vam pomoći u automatizaciji i digitalizaciji poslovanja, optimizaciji softverskog portfolija i implementaciji najnovije tehnologije.
+                </div>
+                <br/>
+            <div class="text-center">
+              <img class="img-fluid mx-auto" src="img/bg.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Area End -->
+
+
+
+    <!-- Services Section Start -->
+    <section id="usluge" class="py-24">
+      <div class="container px-4">
+        <div class="text-center">
+          <h2 class="mb-12 text-4xl text-gray-700 font-bold tracking-wide">
+            Servisne usluge
+          </h2>
+        </div>
+        <div class="flex flex-wrap">
+          <!-- Services item -->
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+            <div class="m-4">
+              <div class="mb-4 text-blue-600 text-5xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-diagram-3" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"/>
+                </svg>
+
+              </div>
+              <div>
+                <h3
+                  class="
+                    text-gray-800
+                    font-semibold
+                    text-lg
+                    block
+                    mb-3
+                    uppercase
+                  "
+                >
+                  IT Komunikacije
+                </h3>
+                <p class="text-gray-600">
+                  Sve vaše IT komunikacije su naša briga. Bilo da se radi o održavanju i unapređenju postojećih ili razvoju novih.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Services item -->
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+            <div class="m-4">
+              <div class="mb-4 text-blue-600 text-5xl">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-hdd-stack" viewBox="0 0 16 16">
+                  <path d="M14 10a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1h12zM2 9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2H2z"/>
+                  <path d="M5 11.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM14 3a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                  <path d="M5 4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                </svg>
+
+
+              </div>
+              <div>
+                <h3
+                  class="
+                    text-gray-800
+                    font-semibold
+                    text-lg
+                    block
+                    mb-3
+                    uppercase
+                  "
+                >
+                  IT infrastruktura
+                </h3>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+                  perspiciatis dicta labore nulla beatae quaerat quia incidunt
+                  laborum aspernatur...
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Services item -->
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+            <div class="m-4">
+              <div class="mb-4 text-blue-600 text-5xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-cloudy" viewBox="0 0 16 16">
+                  <path d="M13.405 8.527a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 14.5H13a3 3 0 0 0 .405-5.973zM8.5 5.5a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1-.001 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 5.5z"/>
+                </svg>
+
+              </div>
+              <div>
+                <h3
+                  class="
+                    text-gray-800
+                    font-semibold
+                    text-lg
+                    block
+                    mb-3
+                    uppercase
+                  "
+                >
+                  Podrška za Cloud servise
+                </h3>
+                <p class="text-gray-600">
+                  Pomažemo u izboru Cloud tehnologije koja najviše odgovara vašim potrebama i staramo se o optimizaciji i 
+                  održavanju postojećih Cloud rešejna u servisa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Services item -->
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+            <div class="m-4">
+              <div class="mb-4 text-blue-600 text-5xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-window-sidebar" viewBox="0 0 16 16">
+                  <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                  <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v2H1V3a1 1 0 0 1 1-1h12zM1 13V6h4v8H2a1 1 0 0 1-1-1zm5 1V6h9v7a1 1 0 0 1-1 1H6z"/>
+                </svg>
+              </div>
+              <div>
+                <h3
+                  class="
+                    text-gray-800
+                    font-semibold
+                    text-lg
+                    block
+                    mb-3
+                    uppercase
+                  "
+                >
+                  Web razvoj
+                </h3>
+                <p class="text-gray-600">
+                  Pomažemo u održavanju i unapređenju postojećih web rešenja i radimo razvoj novih rešenja 
+                  u potpunsoti usklađenih sa vašim potrebama.
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Services item -->
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+            <div class="m-4">
+              <div class="mb-4 text-blue-600 text-5xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+                </svg>
+              </div>
+              <div>
+                <h3
+                  class="
+                    text-gray-800
+                    font-semibold
+                    text-lg
+                    block
+                    mb-3
+                    uppercase
+                  "
+                >
+                  Blockchain razvoj
+                </h3>
+                <p class="text-gray-600">
+                  Iskoristite tehnologiju distribuiranih sistema kako biste poslovanje učinili sigurnijim i transparentnijim i 
+                  automatizujte svoje operativne potrebe uz pomoć pametnih ugovora.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Services item -->
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+            <div class="m-4">
+              <div class="mb-4 text-blue-600 text-5xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
+                  <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698ZM14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13V4Zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698Zm0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525Z"/>
+                </svg>
+              </div>
+              <div>
+                <h3
+                  class="
+                    text-gray-800
+                    font-semibold
+                    text-lg
+                    block
+                    mb-3
+                    uppercase
+                  "
+                >
+                  Upravljanje podacima
+                </h3>
+                <p class="text-gray-600">
+                  Imamo veliko iskustvo u radu sa sistemima za upravljanje velikim količinama 
+                  podataka (Business Intelligence, Data Warehouse, Big Data i sl.) 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Feature Section Start -->
+    <div id="feature" class="bg-blue-100 py-24">
+      <div class="container px-4">
+        <div class="flex flex-wrap items-center">
+          <div class="w-full lg:w-1/2">
+            <div class="mb-5 lg:mb-0">
+              <h2 class="mb-12 text-4xl text-gray-700 font-bold tracking-wide">
+                Konsultantske usluge
+              </h2>
+
+              <div class="flex flex-wrap">
+                <div class="w-full sm:w-1/2 lg:w-1/2">
+                  <div class="m-3">
+                    <div class="icon text-4xl text-blue-600 mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-buildings" viewBox="0 0 16 16">
+                        <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z"/>
+                        <path d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z"/>
+                      </svg>
+                    </div>
+                    <div class="features-content">
+                      <h4 class="text-gray-800 font-medium block mb-3">
+                        IT Arhitektura
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Veniam tempora quidem vel sint.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/2">
+                  <div class="m-3">
+                    <div class="icon text-4xl text-blue-600 mb-3">
+                      <i class="lni lni-gift"> </i>
+                    </div>
+                    <div class="features-content">
+                      <h4 class="text-gray-800 font-medium block mb-3">
+                        IT Strategija
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Veniam tempora quidem vel sint.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/2">
+                  <div class="m-3">
+                    <div class="icon text-4xl text-blue-600 mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-layout-wtf" viewBox="0 0 16 16">
+                        <path d="M5 1v8H1V1h4zM1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm13 2v5H9V2h5zM9 1a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9zM5 13v2H3v-2h2zm-2-1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3zm12-1v2H9v-2h6zm-6-1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H9z"/>
+                      </svg>
+                    </div>
+                    <div class="features-content">
+                      <h4 class="text-gray-800 font-medium block mb-3">
+                        Aplikativni portfolio
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Veniam tempora quidem vel sint.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/2">
+                  <div class="m-3">
+                    <div class="icon text-4xl text-blue-600 mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-ui-checks" viewBox="0 0 16 16">
+                        <path d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H2zm.854-3.646a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708l.646.647 1.646-1.647a.5.5 0 1 1 .708.708l-2 2zm0 8a.5.5 0 0 1-.708 0l-1-1a.5.5 0 0 1 .708-.708l.646.647 1.646-1.647a.5.5 0 0 1 .708.708l-2 2zM7 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
+                    </div>
+                    <div class="features-content">
+                      <h4 class="text-gray-800 font-medium block mb-3">
+                        Upravljanje projektima
+                      </h4>
+                      <p>
+                        Možemo vam pomoći u
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <div class="mx-3 lg:mr-0 lg:ml-3">
+              <img src="assets/img/feature/img-1.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Feature Section End -->
+
+    <!-- Team Section Start -->
+
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="py-24">
+      <div class="container px-4">
+        <div class="text-center">
+          <h2 class="mb-12 text-4xl text-gray-700 font-bold tracking-wide">
+            Kontakt
+          </h2>
+        </div>
+
+        <div class="flex flex-wrap contact-form-area">
+          <div class="w-full md:w-1/2">
+            <div class="contact">
+              <h2 class="uppercase font-bold text-xl text-gray-700 mb-5 ml-3">
+                Kontakt forma
+              </h2>
+              <form id="contactForm" action="#0" method="POST">
+                <div class="flex flex-wrap">
+                  <div class="w-full sm:w-1/2 md:w-full lg:w-1/2">
+                    <div class="mx-3">
+                      <input
+                        type="text"
+                        class="form-input rounded-full"
+                        id="name"
+                        name="name"
+                        placeholder="Name"
+                        required
+                        data-error="Please enter your name"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-1/2 md:w-full lg:w-1/2">
+                    <div class="mx-3">
+                      <input
+                        type="text"
+                        placeholder="Email"
+                        id="email"
+                        class="form-input rounded-full"
+                        name="email"
+                        required
+                        data-error="Please enter your email"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <div class="mx-3">
+                      <input
+                        type="text"
+                        placeholder="Subject"
+                        id="subject"
+                        name="subject"
+                        class="form-input rounded-full"
+                        required
+                        data-error="Please enter your subject"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <div class="mx-3">
+                      <textarea
+                        class="form-input rounded-lg"
+                        id="message"
+                        name="message"
+                        placeholder="Your Message"
+                        rows="5"
+                        data-error="Write your message"
+                        required
+                      >
+                      </textarea>
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <div class="submit-button mx-3">
+                      <button
+                        class="
+                          text-white
+                          bg-blue-600
+                          px-10
+                          py-3
+                          rounded-full
+                          duration-300
+                          hover:bg-blue-500
+                        "
+                        id="form-submit"
+                        type="submit"
+                      >
+                        Pošalji
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="ml-3 md:ml-12 wow fadeIn">
+              <h2 class="uppercase font-bold text-xl text-gray-700 mb-5">
+                Kontaktirajte nas
+              </h2>
+              <div>
+                <div class="flex flex-wrap mb-6 items-center">
+                  <div
+                    class="
+                      w-10
+                      h-10
+                      flex
+                      items-center
+                      justify-center
+                      bg-blue-600
+                      text-xl text-white
+                      rounded-full
+                    "
+                  >
+                    <i class="lni lni-map-marker"> </i>
+                  </div>
+                  <p class="pl-3">VEBCOM, Beograd</p>
+                </div>
+                <div class="flex flex-wrap mb-6 items-center">
+                  <div
+                    class="
+                      w-10
+                      h-10
+                      flex
+                      items-center
+                      justify-center
+                      bg-blue-600
+                      text-xl text-white
+                      rounded-full
+                    "
+                  >
+                    <i class="lni lni-envelope"> </i>
+                  </div>
+                  <p class="pl-3">
+                    <a href="javascript:void(0)" class="block">
+                      vebcomit@gmail.com</a
+                    >
+                  </p>
+                </div>
+                <div class="flex flex-wrap mb-6 items-center">
+                  <div
+                    class="
+                      w-10
+                      h-10
+                      flex
+                      items-center
+                      justify-center
+                      bg-blue-600
+                      text-xl text-white
+                      rounded-full
+                    "
+                  >
+                    <i class="lni lni-phone-set"> </i>
+                  </div>
+                  <p class="pl-3">
+                    <a href="javascript:void(0)" class="block">+381 63 468 635</a>
+                    <a href="javascript:void(0)" class="block">+381 63 123 4567</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+
+    <!-- Footer Section Start -->
+    <footer id="footer" class="bg-gray-800 py-16">
+      <div class="container px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4">
+            <div class="mx-3 mb-8">
+              <div class="footer-logo mb-3">
+                <img src="img/logo.png" alt="" />
+              </div>
+              <p class="text-gray-300">
+                VEBCOM
+                <br>
+                Beograd - Palilula
+                <br>
+                MB: 
+                <br>
+                PIB: 
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4">
+            <div class="mx-3 mb-8">
+              <h3 class="font-bold text-xl text-white mb-5">Company</h3>
+              <ul>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      leading-9
+                      text-gray-100
+                      duration-300
+                      hover:text-blue-500
+                    "
+                  >
+                    Press Releases
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      leading-9
+                      text-gray-100
+                      duration-300
+                      hover:text-blue-500
+                    "
+                    >Mission</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      leading-9
+                      text-gray-100
+                      duration-300
+                      hover:text-blue-500
+                    "
+                    >Strategy</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4">
+            <div class="mx-3 mb-8">
+              <h3 class="font-bold text-xl text-white mb-5">About</h3>
+              <ul>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      leading-9
+                      text-gray-100
+                      duration-300
+                      hover:text-blue-500
+                    "
+                  >
+                    Career
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      leading-9
+                      text-gray-100
+                      duration-300
+                      hover:text-blue-500
+                    "
+                    >Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      leading-9
+                      text-gray-100
+                      duration-300
+                      hover:text-blue-500
+                    "
+                    >Clients</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4">
+            <div class="mx-3 mb-8">
+              <h3 class="font-bold text-xl text-white mb-5">Find us on</h3>
+
+              <ul class="social-icons flex justify-start">
+                <li class="mr-4">
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      flex
+                      justify-center
+                      items-center
+                      w-8
+                      h-8
+                      bg-white
+                      rounded-full
+                      text-sm text-gray-700
+                      duration-300
+                      hover:text-white hover:bg-indigo-500
+                    "
+                  >
+                    <i class="lni lni-facebook-filled" aria-hidden="true"> </i>
+                  </a>
+                </li>
+                <li class="mr-4">
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      flex
+                      justify-center
+                      items-center
+                      w-8
+                      h-8
+                      bg-white
+                      rounded-full
+                      text-sm text-gray-700
+                      duration-300
+                      hover:text-white hover:bg-blue-400
+                    "
+                  >
+                    <i class="lni lni-twitter-filled" aria-hidden="true"> </i>
+                  </a>
+                </li>
+                <li class="mr-4">
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      flex
+                      justify-center
+                      items-center
+                      w-8
+                      h-8
+                      bg-white
+                      rounded-full
+                      text-sm text-gray-700
+                      duration-300
+                      hover:text-white hover:bg-red-500
+                    "
+                  >
+                    <i class="lni lni-instagram-filled" aria-hidden="true"> </i>
+                  </a>
+                </li>
+                <li class="mr-4">
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      flex
+                      justify-center
+                      items-center
+                      w-8
+                      h-8
+                      bg-white
+                      rounded-full
+                      text-sm text-gray-700
+                      duration-300
+                      hover:text-white hover:bg-indigo-600
+                    "
+                  >
+                    <i class="lni lni-linkedin-original" aria-hidden="true">
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <section class="bg-gray-800 py-6 border-t-2 border-gray-700 border-dotted">
+      <div class="container px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full text-center">
+            <p class="text-white">
+              Designed by
+              <a
+                class="text-white duration-300 hover:text-blue-600"
+                href="#"
+                rel="nofollow"
+              >
+                vebcom
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Go to Top Link -->
+    <a
+      href="#"
+      class="
+        back-to-top
+        w-10
+        h-10
+        fixed
+        bottom-0
+        right-0
+        mb-5
+        mr-5
+        flex
+        items-center
+        justify-center
+        rounded-full
+        bg-blue-600
+        text-white text-lg
+        z-20
+        duration-300
+        hover:bg-blue-400
+      "
+    >
+      <i class="lni lni-chevron-up"> </i>
+    </a>
+
+    <!-- All js Here -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
